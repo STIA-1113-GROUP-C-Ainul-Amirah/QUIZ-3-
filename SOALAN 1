@@ -1,0 +1,104 @@
+package Kuiz3Labtest3;
+
+import java.util.Scanner;
+
+import java.util.Arrays;  
+
+public class QuizQuestion1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner (System.in);
+		int [] item = new int [10];
+		int i;
+		
+		System.out.println("Please input 10 integers.");
+		for (i = 0; i < item.length;i++)  
+		item[i] = sc.nextInt();
+		
+		for (i = 0; i <item.length;i++)  
+		Print((i+1),item[i]);
+		
+		System.out.println("Please input the integer you want to search");
+		int find = sc.nextInt();
+       	 
+		Find(item, find);
+		Arrays.sort(item);   
+		System.out.println("Elements of array sorted in ascending order: ");  
+		for (int y = 0; y < item.length; y++)   
+		{       
+		System.out.println(item[y]);   
+		}   
+	}
+
+	
+	public static void Print (int g, int h) {
+
+	     System.out.println("Integer " + g + ": " + h);
+	}
+	
+	
+		public static void Find(int[ ] num, int searchValue) {
+			  for (int j=0; j < num.length; j++) {
+				 if( j == searchValue) {
+					  System.out.println("The search value is " + num[j]);
+					  break;
+				 }
+			  }		
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+
+
+
+
+OUTPUT : 
+
+
+
+
+Please input 10 integers.
+9
+8
+7
+6
+5
+4
+3
+2
+1
+8
+Integer 1: 9
+Integer 2: 8
+Integer 3: 7
+Integer 4: 6
+Integer 5: 5
+Integer 6: 4
+Integer 7: 3
+Integer 8: 2
+Integer 9: 1
+Integer 10: 8
+Please enter integer you want to find
+8
+The search value is 1
+Elements of array sorted : 
+1
+2
+3
+4
+5
+6
+7
+8
+8
+9
+
+
+
